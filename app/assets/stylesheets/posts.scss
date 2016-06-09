@@ -1,3 +1,104 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    width: 100%;
+    height: 815px;
+    background-color: white;
+    margin-bottom: -1%;
+}
+
+.home-myParallax {
+    padding: 300px 0;
+    background-image: image-url("canopy.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: -2%;
+}
+
+.home-myParallax h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 10rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-description {
+  border: 5px solid $medium-gray;
+  border-bottom:1px solid $medium-gray;
+  border-left:0;
+  border-right:0;
+  background-image: image-url("blue-sky.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 70%;
+  color: white;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+    h1 {
+      font-size: 3.5rem;
+    }
+}
+
+.home-posts-container {
+  display: flex;
+}
+
+.recent-posts {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 2%;
+}
+
+// vertical centering mixin found in Foundation
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.horizontal-callout-card {
+  .callout {
+    position: relative;
+    border: 1px solid $medium-gray;
+  }
+
+  // .first-section,
+  // .last-section {
+  //   p {
+  //     @include vertical-center;
+  //   }
+  // }
+
+  .first-section {
+    border-bottom: 0;
+  }
+
+  .last-section {
+    border-top: 0;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .callout {
+      margin-bottom: 0;
+    }
+
+    .first-section {
+      border-right: none;
+    }
+
+    .last-section {
+      border-left: none;
+    }
+  }
+}

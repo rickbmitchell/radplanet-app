@@ -1,31 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.name %></td>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<div class="home-container">
+  <div class="home-myParallax large-12 medium-12 small-12 columns">
+    <h1>RAD PLANET</h1>
+  </div>
+</div>
+<div class="home-description large-12 medium-12 small-12 columns"><h1>Our Planet Is Rad. Find Out Why. One Day At a Time.</h1></div>
+<div class="recent-posts large-12 medium-12 small-12 columns"><h2>Recent Posts</h2></div>
+<% @posts.each do |post| %>
+<div class="horizontal-callout-card">
+  <div class="row column medium-8" data-equalizer>
+    <div class="row collapse">
+      <div class="column medium-3">
+        <div class="callout secondary first-section" data-equalizer-watch>
+          <strong><%= post.title %></strong>
+        </div>
+      </div>
+      <div class="column medium-6">
+        <div class="callout middle-section" data-equalizer-watch>
+          <p><%= truncate(post.content, length: 250, omission: '...') { link_to "Read more", "#{post.id}" } %></p>
+        </div>
+      </div>
+      <div class="column medium-3">
+        <div class="callout secondary last-section" data-equalizer-watch>
+          <p><%= post.name %></p><br>
+          <p><%= post.created_at.strftime("%b %d %Y") %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

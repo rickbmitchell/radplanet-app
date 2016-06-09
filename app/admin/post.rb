@@ -25,6 +25,7 @@ ActiveAdmin.register Post do
       truncate(post.source, omision: "...", length: 50)
     end
     column :name
+    column :created_at
     actions
   end
 

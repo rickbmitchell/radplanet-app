@@ -13,7 +13,20 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
-  permit_params :title, :content, :name
+  permit_params :title, :content, :name, :source
+
+  index do
+    column :id
+    column :title
+    column :content do |post|
+      truncate(post.content, omision: "...", length: 100)
+    end
+    column :source do |post|
+      truncate(post.source, omision: "...", length: 50)
+    end
+    column :name
+    actions
+  end
 
   form do |f|
     f.inputs "Post" do
@@ -21,6 +34,7 @@ ActiveAdmin.register Post do
       f.input :title
       f.input :content
       f.input :source
+      f.input :created_at
     end
     f.actions
   end

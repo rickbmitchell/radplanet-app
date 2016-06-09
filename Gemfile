@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'activeadmin', github: 'activeadmin'
 
 gem 'devise'
+
+gem 'foundation-rails'
 # gem "meta_search", '>= 1.1.0.pre'
 
 # Use ActiveModel has_secure_password

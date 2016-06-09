@@ -15,4 +15,14 @@ ActiveAdmin.register Post do
 
   permit_params :title, :content, :name
 
+  form do |f|
+    f.inputs "Post" do
+      f.input :name, :as => :select, :collection => Choices['name']
+      f.input :title
+      f.input :content
+      f.input :source
+    end
+    f.actions
+  end
+
 end

@@ -50,6 +50,10 @@ $medium-gray: #cacaca;
     }
 }
 
+.home-date {
+  margin-left: 18%;
+}
+
 .home-posts-container {
   display: flex;
 }
@@ -73,12 +77,12 @@ $medium-gray: #cacaca;
     border: 1px solid $medium-gray;
   }
 
-  // .first-section,
-  // .last-section {
-  //   p {
-  //     @include vertical-center;
-  //   }
-  // }
+  .first-section,
+  .last-section {
+    p {
+      @include vertical-center;
+    }
+  }
 
   .first-section {
     border-bottom: 0;

@@ -7,7 +7,8 @@
 </div>
 <div class="home-description large-12 medium-12 small-12 columns"><h1>Our Planet Is Rad. Find Out Why. One Day At a Time.</h1></div>
 <div class="recent-posts large-12 medium-12 small-12 columns"><h2>Recent Posts</h2></div>
-<% @posts.each do |post| %>
+<% @posts.reverse.each do |post| %>
+<div class="home-date"> <h4><%= post.created_at.strftime("%B %d, %Y") %></h4> </div>
 <div class="horizontal-callout-card">
   <div class="row column medium-8" data-equalizer>
     <div class="row collapse">
@@ -24,7 +25,6 @@
       <div class="column medium-3">
         <div class="callout secondary last-section" data-equalizer-watch>
           <p><%= post.name %></p><br>
-          <p><%= post.created_at.strftime("%b %d %Y") %></p>
         </div>
       </div>
     </div>

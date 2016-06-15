@@ -20,7 +20,7 @@
       </div>
       <div class="column medium-6">
         <div class="callout middle-section" data-equalizer-watch>
-          <p><%= truncate(post.content, length: 250, omission: '...') { link_to "Read more", "#{post.id}" } %></p>
+          <p><%= truncate(post.content, length: 250, omission: '...') { link_to "Read more", "posts/#{post.id}" } %></p>
         </div>
       </div>
       <div class="column medium-3">

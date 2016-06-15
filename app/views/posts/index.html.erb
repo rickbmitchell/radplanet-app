@@ -5,7 +5,8 @@
     <h1>RAD PLANET</h1>
   </div>
 </div>
-<div class="home-description large-12 medium-12 small-12 columns"><h1>Our Planet Is Rad. Find Out Why. One Day At a Time.</h1></div>
+<div class="home-description1 large-12 medium-12 small-12 columns"><h1>Our Planet Is Amazing.</h1></div>
+<div class="home-description2 large-12 medium-12 small-12 columns"><h1>Remind Yourself. Once a Day.</h1></div>
 <div class="recent-posts large-12 medium-12 small-12 columns"><h2>Recent Posts</h2></div>
 <% @posts.reverse.each do |post| %>
 <div class="home-date"> <h4><%= post.created_at.strftime("%B %d, %Y") %></h4> </div>
@@ -14,7 +15,7 @@
     <div class="row collapse">
       <div class="column medium-3">
         <div class="callout secondary first-section" data-equalizer-watch>
-          <strong><%= post.title %></strong>
+          <strong><p><%= post.title %></p></strong>
         </div>
       </div>
       <div class="column medium-6">

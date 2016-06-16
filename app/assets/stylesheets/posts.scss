@@ -36,6 +36,11 @@ $medium-gray: #cacaca;
     padding-top: 0;
 }
 
+.home-container2, .home-container3 {
+  width: 100%;
+  height: 400px;
+}
+
 .home-description1 {
   border: 1px solid black;
   border-bottom:1px solid black;
@@ -43,8 +48,8 @@ $medium-gray: #cacaca;
   border-right:0;
   background-image: image-url("gmountains3.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 0 70%;
+  // background-size: 100%;
+  // background-position: 0 70%;
   color: white;
   text-align: center;
   padding-top: 12%;
@@ -64,8 +69,8 @@ $medium-gray: #cacaca;
   border-right:0;
   background-image: image-url("ocean2.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 0 20%;
+  background-size: 200%;
+  // background-position: 0 20%;
   color: white;
   text-align: center;
   padding-top: 12%;
@@ -132,4 +137,14 @@ $medium-gray: #cacaca;
       border-left: none;
     }
   }
+}
+
+#indiv-post-container {
+  margin-left: 1%;
+  margin-top: 2%;
+
+}
+
+.indiv-post {
+  white-space: pre-wrap;
 }

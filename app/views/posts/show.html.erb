@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div id="indiv-post-container">
+<h4><%= @post.created_at.strftime("%B %d, %Y") %></h4>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+<h5>
+  <strong><%= @post.title %></strong>
+</h5>
 
+<div class="indiv-post">
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
   <%= @post.content %>
+</p>
+</div>
+
+<p>
+  <strong>Category:</strong>
+  <%= @post.name %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+</div>

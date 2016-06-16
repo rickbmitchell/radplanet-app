@@ -8,6 +8,10 @@ class PostsController < InheritedResources::Base
     @post = get_post
   end
 
+  def all
+    @post = Post.all
+  end
+
   private
 
     def post_params

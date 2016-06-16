@@ -33,7 +33,7 @@ ActiveAdmin.register Post do
     f.inputs "Post" do
       f.input :name, :as => :select, :collection => Choices['name']
       f.input :title
-      f.input :content
+      f.input :content.html_safe
       f.input :source
       f.input :created_at
     end

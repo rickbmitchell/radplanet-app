@@ -1,0 +1,30 @@
+<div class="all-container">
+<%= link_to root_path do %>
+<div class="all-description second-homeParallax large-12 medium-12 small-12 columns"><h1>Rad Planet</h1></div>
+<% end %>
+</div>
+<div class="recent-posts large-12 medium-12 small-12 columns"><h2>All Discoveries</h2></div>
+<% @posts.reverse.each do |post| %>
+<div class="home-date"> <h4><%= post.created_at.strftime("%B %d, %Y") %></h4> </div>
+<div class="horizontal-callout-card">
+  <div class="row column medium-8" data-equalizer>
+    <div class="row collapse">
+      <div class="column medium-3">
+        <div class="callout secondary first-section" data-equalizer-watch>
+          <strong><p><%= post.title %></p></strong>
+        </div>
+      </div>
+      <div class="column medium-6">
+        <div class="callout middle-section" data-equalizer-watch>
+          <p><%= truncate(post.content, length: 300, omission: '...') { link_to "Read more", "posts/#{post.id}" } %></p>
+        </div>
+      </div>
+      <div class="column medium-3">
+        <div class="callout secondary last-section" data-equalizer-watch>
+          <p><%= post.name %></p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

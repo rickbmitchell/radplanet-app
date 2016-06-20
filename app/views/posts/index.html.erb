@@ -12,7 +12,7 @@
 <div class="home-description2 second-homeParallax large-12 medium-12 small-12 columns"><h1>Remind Yourself. Once a Day.</h1></div>
 </div>
 <div class="recent-posts large-12 medium-12 small-12 columns"><h2>Recent Discoveries</h2></div>
-<% @posts.reverse.each do |post| %>
+<% @posts.reverse.first(10).each do |post| %>
 <div class="home-date"> <h4><%= post.created_at.strftime("%B %d, %Y") %></h4> </div>
 <div class="horizontal-callout-card">
   <div class="row column medium-8" data-equalizer>
@@ -35,4 +35,7 @@
     </div>
   </div>
 </div>
+<% end %>
+<%= link_to all_path do %>
+  <div class="all-link"><p>Read All</p></div>
 <% end %>

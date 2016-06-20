@@ -3,12 +3,15 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :posts
+   # get '/posts/category/space' => 'posts#space'
+   get '/all' => 'posts#all'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'posts#index'
+
 
 
 

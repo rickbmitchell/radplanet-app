@@ -9,7 +9,11 @@ class PostsController < InheritedResources::Base
   end
 
   def all
-    @post = Post.all
+    @posts = Post.all
+  end
+
+  def space
+    @post = get_category
   end
 
   private
@@ -21,6 +25,10 @@ class PostsController < InheritedResources::Base
     def get_post
       Post.find(params[:id])
     end
+
+    # def get_category
+    #   Post.find(params[:name])
+    # end
 
 end
 

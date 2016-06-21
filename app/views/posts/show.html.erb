@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="all-container">
+<%= link_to root_path do %>
+<div class="<%= @post.name.downcase %>-description second-homeParallax large-12 medium-12 small-12 columns"><h1>RAD PLANET</h1></div>
+<% end %>
+</div>
 <div id="indiv-post-container">
 <h4><%= @post.created_at.strftime("%B %d, %Y") %></h4>
 
@@ -13,11 +17,15 @@
 </div>
 
 <p>
-  <strong>Category:</strong>
-  <%= @post.name %>
+  <strong>Source:</strong>
+  <%= link_to @post.source, "#{@post.source}" %><br>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<p>
+  <strong>Category:</strong>
+  <%= link_to @post.name, "/#{@post.name}".downcase %><br>
+</p>
 
-</div>
+<%= link_to 'Back to Homepage', posts_path %><br>
+
+</div><br>

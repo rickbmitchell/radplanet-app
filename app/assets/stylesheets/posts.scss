@@ -82,6 +82,35 @@ $medium-gray: #cacaca;
     }
 }
 
+.sub-nav {
+  background-color: #f2f2f2;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+
+  .sub-nav-title {
+    color: black;
+    padding-left: 1rem;
+  }
+
+  li {
+    color: #999999;
+    font-size: 0.77778rem;
+    padding-left: 0.88889rem;
+
+    a:link {
+    text-decoration: none;
+
+    &.active a {
+      border-radius: 3px;
+      background: #008CBA;
+      color: #fff;
+      cursor: default;
+      font-weight: normal;
+      padding: 0.16667rem 0.88889rem;
+    }
+  }
+}
+}
+
 .home-date {
   margin-left: 18%;
 }

@@ -13,7 +13,8 @@
 </div>
 <ul class="sub-nav menu" role="navigation" title="Filter Menu List">
   <li class="sub-nav-title">Categories:</li>
-  <li class="active"><span class="show-for-sr">You're viewing </span><a href="/all">All</a></li>
+  <li class="active"><span class="show-for-sr">You're viewing </span><a href="/">Home</a></li>
+  <li><a href="/all">All</a></li>
   <li><a href="/arts">Arts</a></li>
   <li><a href="/earth">Earth</a></li>
   <li><a href="/education">Education</a></li>
@@ -49,6 +50,8 @@
   </div>
 </div>
 <% end %>
+<div class="all-link">
 <%= link_to all_path do %>
-  <div class="all-link"><p>Read All</p></div>
+  <p>Read All</p>
+</div>
 <% end %>

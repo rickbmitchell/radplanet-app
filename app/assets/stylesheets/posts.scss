@@ -75,6 +75,7 @@ $medium-gray: #cacaca;
   text-align: center;
   padding-top: 12%;
   padding-bottom: 12%;
+  margin-bottom: 0;
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 5.8rem;
@@ -130,8 +131,11 @@ $medium-gray: #cacaca;
   a:link {
     text-decoration: none;
   }
+  a:hover {
+    opacity: 0.7;
+  }
   p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 

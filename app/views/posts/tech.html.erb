@@ -3,6 +3,20 @@
 <div class="tech-description second-homeParallax large-12 medium-12 small-12 columns"><h1>RAD PLANET</h1></div>
 <% end %>
 </div>
+<ul class="sub-nav menu" role="navigation" title="Filter Menu List">
+  <li class="sub-nav-title">Categories:</li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/all">All</a></li>
+  <li><a href="/arts">Arts</a></li>
+  <li><a href="/earth">Earth</a></li>
+  <li><a href="/education">Education</a></li>
+  <li><a href="/environment">Environment</a></li>
+  <li><a href="/health">Health</a></li>
+  <li><a href="/science">Science</a></li>
+  <li><a href="/society">Society</a></li>
+  <li><a href="/space">Space</a></li>
+  <li class="active"><span class="show-for-sr">You're viewing </span><a href="/">Tech</a></li>
+</ul>
 <div class="recent-posts large-12 medium-12 small-12 columns"><h2>Technology</h2></div>
 <% @posts.where("name = 'Tech'").reverse.each do |post| %>
 <div class="home-date"> <h4><%= post.created_at.strftime("%B %d, %Y") %></h4> </div>

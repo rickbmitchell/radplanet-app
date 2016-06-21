@@ -21,7 +21,7 @@
       </div>
       <div class="column medium-3">
         <div class="callout secondary last-section" data-equalizer-watch>
-          <p><%= post.name %></p><br>
+          <p><%= link_to post.name, "#{post.name}".downcase %></p><br>
         </div>
       </div>
     </div>

@@ -3,7 +3,15 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :posts
-   # get '/posts/category/space' => 'posts#space'
+   get '/space' => 'posts#space'
+   get '/health' => 'posts#health'
+   get '/tech' => 'posts#tech'
+   get '/science' => 'posts#science'
+   get '/environment' => 'posts#environment'
+   get '/earth' => 'posts#earth'
+   get '/education' => 'posts#education'
+   get '/society' => 'posts#society'
+   get '/arts' => 'posts#arts'
    get '/all' => 'posts#all'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -11,8 +19,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'posts#index'
-
-
 
 
   # Example of regular route:

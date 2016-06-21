@@ -13,7 +13,39 @@ class PostsController < InheritedResources::Base
   end
 
   def space
-    @post = get_category
+    @posts = Post.all
+  end
+
+  def health
+    @posts = Post.all
+  end
+
+  def tech
+    @posts = Post.all
+  end
+
+  def science
+    @posts = Post.all
+  end
+
+  def environment
+    @posts = Post.all
+  end
+
+  def earth
+    @posts = Post.all
+  end
+
+  def education
+    @posts = Post.all
+  end
+
+  def society
+    @posts = Post.all
+  end
+
+  def arts
+    @posts = Post.all
   end
 
   private

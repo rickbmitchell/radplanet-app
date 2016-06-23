@@ -391,13 +391,20 @@ $medium-gray: #cacaca;
   }
 }
 
-#indiv-post-container {
-  margin-left: 1%;
-  margin-top: 2%;
-  h4 {
-    margin-top: 8%;
-  }
 
+
+#indiv-post-container {
+  margin-left: 5%;
+  padding-top: 3%;
+  margin-right: 25%;
+  h5 {
+    margin-top: 8%;
+    margin-bottom: 3%;
+  }
+  h4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .indiv-post {
